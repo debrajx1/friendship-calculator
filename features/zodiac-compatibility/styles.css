@@ -1,0 +1,13 @@
+/* Feature Specific Styles */
+.zodiac-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1s ease;
+}
+
+/* Add any additional styles if needed */

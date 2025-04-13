@@ -1,0 +1,149 @@
+/* start.css — Friendship Calculator Start Screen */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #FFA69E, #FF7F50);
+    background-size: 200% 200%;
+    animation: gradientMove 10s ease infinite;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Background animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 460px;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.8s ease;
+}
+
+h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: #FFE5D9;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-size: 1.2rem;
+    color: #FDFDFD;
+    margin-bottom: 1.8rem;
+    font-weight: 400;
+}
+
+/* Input styling */
+input[type="text"] {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #ffffff44;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #FF7F50;
+    box-shadow: 0 0 10px rgba(255, 127, 80, 0.3);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    background-color: #FF7F50;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 14px rgba(255, 127, 80, 0.3);
+}
+
+button:hover {
+    background-color: #FF5A36;
+    box-shadow: 0 8px 18px rgba(255, 90, 54, 0.4);
+}
+
+/* Entry animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer styling */
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    font-size: 0.95rem;
+    color: #FFDDC1;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+footer a {
+    color: #FFDDC1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: #FFE5B4;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+    }
+}

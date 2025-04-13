@@ -1,0 +1,17 @@
+/* Feature Specific Styles */
+.timeline-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1s ease;
+}
+
+.timeline {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}

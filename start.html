@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendship Calculator App</title>
+    <link rel="stylesheet" href="start.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="start-card">
+            <h1>Welcome to the Friendship Calculator!</h1>
+            <p>Enter your name to begin:</p>
+
+            <input type="text" id="userNameInput" placeholder="Your name" required>
+
+            <button onclick="startApp()">✨ Start ✨</button>
+        </div>
+    </div>
+
+    <script>
+        function startApp() {
+            const userName = document.getElementById("userNameInput").value;
+            if (userName) {
+                // Store the user's name in localStorage
+                localStorage.setItem("userName", userName);
+                // Redirect to the main app's index.html
+                window.location.href = "main/index.html";
+            } else {
+                alert("Please enter your name!");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendship Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../features/friendship-quiz/index.html">Friendship Quiz</a></li>
+                <li><a href="../features/zodiac-compatibility/index.html">Zodiac Compatibility</a></li>
+                <li><a href="../features/friendship-meter/index.html">Friendship Meter</a></li>
+                <li><a href="../features/mood-tracker/index.html">Mood Tracker</a></li>
+                <li><a href="../features/friendship-timeline/index.html">Friendship Timeline</a></li>
+                <li><a href="../features/badges/index.html">Badges & Achievements</a></li>
+                <li><a href="../features/challenges/index.html">Challenges</a></li>
+                <li><a href="../features/quotes/index.html">Quotes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="calculator-card">
+            <h1>🌟 Friendship Calculator 🌟</h1>
+            <p class="tagline">Discover your friendship vibe!</p>
+
+            <!-- "Your name" is prefilled from localStorage -->
+            <input type="text" id="name1" placeholder="Your name" readonly>
+
+            <!-- "Friend's name" is entered by User 2 -->
+            <input type="text" id="name2" placeholder="Friend's name" required>
+
+            <button id="calculate-btn" onclick="calculateFriendship()">✨ Calculate ✨</button>
+
+            <div id="progressBar" class="hidden">
+                <p>Calculating friendship score...</p>
+                <div class="bar"><div class="fill"></div></div>
+            </div>
+
+            <div id="result" class="result-card hidden"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>🚀 Powered by <a href="https://github.com/debrajx1" target="_blank" class="mephisto">Mephisto X</a> &nbsp; |&nbsp;  Creating bonds, one friendship at a time! 🌟</p>
+    </footer>    
+
+    <script src="script.js"></script>
+
+    <script>
+        // Retrieve the user's name from localStorage and display it in the "Your name" input field
+        const userName = localStorage.getItem("userName");
+        if (userName) {
+            document.getElementById("name1").value = userName;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+.badge-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 500px;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .badge-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .badge-list li {
+    background: #fff3f0;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid #ff6f61;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  

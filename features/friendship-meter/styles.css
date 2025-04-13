@@ -1,0 +1,19 @@
+/* Feature Specific Styles */
+.friendship-meter-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1s ease;
+}
+
+.meter-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #eee;
+    margin-top: 20px;
+    border-radius: 5px;
+}
