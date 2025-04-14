@@ -1,19 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Friendship Badges</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badges & Achievements</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="badge-card">
-    <h2>🏅 Your Friendship Achievements</h2>
-    <ul id="badgeList" class="badge-list"></ul>
-  </div>
-  <footer class="footer">
-    <p>🚀 Powered by Mephisto X | Creating bonds, one friendship at a time! 🌟</p>
-  </footer>
-  <script src="script.js"></script>
+    <div class="badges-container">
+        <h1>Badges & Achievements</h1>
+        <p>Unlock badges by achieving milestones in your friendship journey!</p>
+        
+        <div id="badgeList" class="badge-list">
+            <!-- Example Badges -->
+            <div class="badge-item unlocked">
+                <img src="logo1.png" alt="Badge 1">
+            </div>
+            <div class="badge-item locked">
+                <img src="path/to/logo2.png" alt="Badge 2">
+            </div>
+            <div class="badge-item unlocked">
+                <img src="path/to/logo3.png" alt="Badge 3">
+            </div>
+            <div class="badge-item locked">
+                <img src="path/to/logo4.png" alt="Badge 4">
+            </div>
+            <div class="badge-item unlocked">
+                <img src="path/to/logo5.png" alt="Badge 5">
+            </div>
+            <div class="badge-item locked">
+                <img src="path/to/logo6.png" alt="Badge 6">
+            </div>
+            <div class="badge-item unlocked">
+                <img src="path/to/logo7.png" alt="Badge 7">
+            </div>
+            <div class="badge-item locked">
+                <img src="path/to/logo8.png" alt="Badge 8">
+            </div>
+            <div class="badge-item unlocked">
+                <img src="path/to/logo9.png" alt="Badge 9">
+            </div>
+            <div class="badge-item locked">
+                <img src="path/to/logo10.png" alt="Badge 10">
+            </div>
+        </div>
+
+        <button id="claimBadgeBtn" class="claim-button">Claim a Badge</button>
+    </div>
+
+    <!-- Notification container -->
+    <div id="notification" class="notification" style="display:none;">
+        <span id="notificationMessage"></span>
+    </div>
+
+    <footer class="footer">
+        <p>🚀 Powered by <a href="https://github.com/debrajx1" target="_blank"><strong>Mephisto X</strong></a> | "One challenge down, a stronger bond ahead! 💪"</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

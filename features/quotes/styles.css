@@ -1,8 +1,254 @@
-.quote-card {
-    background-color: #fff;
-    padding: 30px;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    padding: 20px 20px 80px; /* Added bottom padding to ensure space for footer */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: background-color 0.4s ease; /* Adding smooth color transition on background */
+  }
+  
+  /* Scrollbar Customization */
+  ::-webkit-scrollbar {
+    width: 10px; /* Customize the scrollbar width */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Light background for the scrollbar track */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #fcb69f; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    transition: background 0.3s ease; /* Smooth transition when hovering */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff9a76; /* Darker color on hover for better visibility */
+  }
+  
+  /* Main Container */
+  .container {
+    background: #fff;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 40px 35px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Titles */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
     text-align: center;
-    max-width: 500px
-}
+    color: #222;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+    margin: 20px 0 12px;
+    text-align: center;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  /* Quote Display */
+  #quoteText,
+  #author,
+  #generatedQuotePreview {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #444;
+    margin: 15px 0;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+  }
+  
+  #author {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #888;
+  }
+  
+  /* Input Fields */
+  input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0 18px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #fcb69f;
+    box-shadow: 0 0 8px rgba(252, 182, 159, 0.4);
+  }
+  
+  /* Buttons */
+  button {
+    padding: 14px 26px;
+    font-size: 1.1rem;
+    margin: 12px 8px 0 0;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(to right, #fcb69f, #f88379);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(252, 182, 159, 0.3);
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #ff9a76, #ff6f61);
+    transform: scale(1.05);
+  }
+  
+  /* Reaction Buttons */
+  .reaction-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 16px;
+  }
+  
+  .reaction-btn {
+    font-size: 2.2rem; /* Increased font-size for better visibility */
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reaction-btn:hover {
+    transform: scale(1.2);
+    border-color: #fcb69f;
+    background-color: #fff6f2;
+  }
+  
+  /* Optional: Ensure the emoji is centered correctly */
+  .reaction-btn span {
+    display: block;
+    font-size: 2rem; /* Adjusted size of emoji */
+    line-height: 1; /* Ensure the emoji is vertically centered */
+  }
+  
+  /* Footer */
+  .footer {
+    position: fixed; /* Fixed footer at the bottom */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    padding: 12px;
+    background-color: #fff; /* Background color to ensure visibility */
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1); /* Optional: Add shadow to make footer pop */
+  }
+  
+  /* Footer Links */
+  .footer a.mephisto-link {
+    color: #e67350;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .footer a.mephisto-link:hover {
+    color: #ff5722;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .container {
+      padding: 30px 25px;
+    }
+  
+    h1 {
+      font-size: 2.1rem;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+    }
+  
+    button {
+      width: 100%;
+      margin: 12px 0;
+    }
+  
+    .reaction-buttons {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+  
+    .reaction-btn {
+      width: 52px;
+      height: 52px;
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Notification style for reactions */
+  .reaction-notification {
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,57 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Friendship Quiz</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div class="wrapper">
-        <div class="quiz-card">
-            <h2 class="quiz-title">💬 Friendship Quiz</h2>
-            <p class="quiz-subtitle">Take this quiz to discover how well you know your friend!</p>
-            
-            <form id="quizForm" class="quiz-form">
-                <label for="question1" class="quiz-label">🎨 What is your friend's favorite color?</label>
-                <input type="text" id="question1" placeholder="Type your answer..." required class="quiz-input">
+    <div class="container">
+        <!-- Create Quiz Section -->
+        <div id="quiz-creator" class="quiz-section">
+            <h2 class="title">🎉 Create Your Friendship Quiz</h2>
+            <p class="subtitle">Add fun questions and options!</p>
 
-                <label for="question2" class="quiz-label">🎬 What movie do they love?</label>
-                <input type="text" id="question2" placeholder="e.g. Inception" required class="quiz-input">
+            <form id="quizCreatorForm" class="quiz-form">
+                <div id="questionContainer"></div>
+                <button type="button" id="addQuestionBtn" class="button">➕ Add Question</button>
+                <button type="submit" class="button">💾 Save Quiz</button>
+            </form>
+        </div>
 
-                <label for="question3" class="quiz-label">🍕 Favorite food they never say no to?</label>
-                <input type="text" id="question3" placeholder="e.g. Pizza" required class="quiz-input">
-
-                <label for="question4" class="quiz-label">😂 Inside joke only you both get?</label>
-                <input type="text" id="question4" placeholder="Type it here..." required class="quiz-input">
-
-                <label for="question5" class="quiz-label">🌍 Dream travel destination together?</label>
-                <input type="text" id="question5" placeholder="e.g. Japan" required class="quiz-input">
-
-                <button type="submit" class="quiz-button">✨ Submit ✨</button>
-                <button type="reset" class="quiz-button reset">🔄 Reset</button>
+        <!-- Take Quiz Section -->
+        <div id="quiz-taker" class="quiz-section hidden">
+            <h2 class="title">🎯 Take the Quiz</h2>
+            <form id="quizTakerForm" class="quiz-form">
+                <div id="quizContainer"></div>
+                <button type="submit" class="button">✅ Submit Answers</button>
             </form>
 
-            <!-- Fake Result Card Placeholder (HTML-only) -->
-            <div class="result-card hidden">
-                <p>🎉 Great job! You and your friend know each other well! (Result appears here)</p>
-            </div>
-
-            <!-- Fun Progress Bar (Visual only, no JS) -->
-            <div class="quiz-progress-bar">
-                <div class="quiz-fill"></div>
+            <div id="resultCard" class="result-card hidden">
+                <p id="resultText"></p>
             </div>
         </div>
     </div>
 
-
-
     <footer class="footer">
-        <p>🚀 Powered by <a href="https://github.com/debrajx1" target="_blank" class="mephisto">Mephisto X</a> | Creating bonds, one friendship at a time! 🌟</p>
+        <p>🚀 Powered by <a href="https://github.com/debrajx1" target="_blank"><strong>Mephisto X</strong></a> | Creating bonds, one friendship at a time! 🌟</p>
     </footer>
 
     <script src="script.js"></script>
-    
 </body>
 </html>

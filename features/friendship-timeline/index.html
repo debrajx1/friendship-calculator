@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friendship Timeline</title>
-    <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📸 Friendship Timeline</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <div class="timeline-card">
-        <h2>Friendship Timeline</h2>
-        <input type="date" id="dateInput" placeholder="Enter date of friendship milestone">
-        <button onclick="addMilestone()">Add Milestone</button>
-        <div id="timeline" class="timeline"></div>
+  <div class="timeline-card">
+    <h2>📸 Friendship Timeline</h2>
+    <p>Add special moments you've shared with your friend!</p>
+
+    <div class="top-bar">
+      <select id="sortOptions">
+        <option value="newest">Sort by Newest</option>
+        <option value="oldest">Sort by Oldest</option>
+        <option value="mood">Sort by Mood</option>
+      </select>
     </div>
-    <footer class="footer">
-        <p>🚀 Powered by Mephisto X | Creating bonds, one friendship at a time! 🌟</p>
-    </footer>
-    <script src="script.js"></script>
+
+    <form id="memoryForm">
+      <input type="text" id="memoryText" placeholder="Describe the memory..." required />
+      <input type="date" id="memoryDate" required />
+      <select id="memoryMood">
+        <option value="">Select Mood</option>
+        <option value="😊">Happy</option>
+        <option value="😂">Funny</option>
+        <option value="🥺">Emotional</option>
+        <option value="🎉">Celebration</option>
+        <option value="❤️">Heartwarming</option>
+      </select>
+      <input type="file" id="memoryImage" accept="image/*" />
+      <img id="previewImage" src="#" alt="Preview" style="display:none;" />
+      <button type="submit">Add Memory</button>
+    </form>
+
+    <p id="memoryCount">📌 You have <span>0</span> memories added!</p>
+    <div id="timelineContainer" class="timeline-container animate__animated animate__fadeInUp"></div>
+  </div>
+
+  <footer class="footer">
+    <p>🕒 Powered by <a class="mephisto" href="https://github.com/MephistoX" target="_blank">Mephisto X</a> | Friendship memories that last forever 💖</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

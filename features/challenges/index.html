@@ -1,19 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Friendship Challenges</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Challenge</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="challenge-card">
-    <h2>🎯 Friendship Challenges</h2>
-    <ul id="challengeList" class="challenge-list"></ul>
+  <div class="container">
+    <h2>Roll the Dice to Get Your Challenge!</h2>
+    <div class="dice-container">
+      <div id="dice">
+        <div class="face front"><span class="dot center"></span></div>
+        <div class="face back">
+          <span class="dot top-left"></span>
+          <span class="dot bottom-right"></span>
+        </div>
+        <div class="face right">
+          <span class="dot top-left"></span>
+          <span class="dot center"></span>
+          <span class="dot bottom-right"></span>
+        </div>
+        <div class="face left">
+          <span class="dot top-left"></span>
+          <span class="dot top-right"></span>
+          <span class="dot bottom-left"></span>
+          <span class="dot bottom-right"></span>
+        </div>
+        <div class="face top">
+          <span class="dot top-left"></span>
+          <span class="dot top-right"></span>
+          <span class="dot center"></span>
+          <span class="dot bottom-left"></span>
+          <span class="dot bottom-right"></span>
+        </div>
+        <div class="face bottom">
+          <span class="dot top-left"></span>
+          <span class="dot top-right"></span>
+          <span class="dot middle-left"></span>
+          <span class="dot middle-right"></span>
+          <span class="dot bottom-left"></span>
+          <span class="dot bottom-right"></span>
+        </div>
+      </div>
+    </div>
+    <button onclick="rollDice()">Roll the Dice</button>
+    <div id="challenge"></div>
   </div>
+
   <footer class="footer">
-    <p>🚀 Powered by Mephisto X | Creating bonds, one friendship at a time! 🌟</p>
+    <div class="footer-container">
+      <p>🚀 Powered by <a href="https://github.com/debrajx1" target="_blank"><strong class="highlight">Mephisto X</strong></a> | Turning challenges into memories with friends! ✨</p>
+    </div>
   </footer>
+  
+
   <script src="script.js"></script>
 </body>
 </html>

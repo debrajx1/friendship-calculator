@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Friendship Quotes</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="quote-card">
-    <h2>💬 Friendship Quotes</h2>
-    <p id="quoteDisplay" class="quote-display"></p>
-    <button id="newQuoteBtn">New Quote</button>
+  <div class="container">
+    <h1>Friendship Quotes</h1>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+      <p id="quoteText">Loading...</p>
+      <p id="author"></p>
+      <button id="newQuoteBtn">Get New Quote</button>
+      <button id="generateQuoteBtn">Generate Your Quote</button>
+    </div>
+
+    <!-- Generate Your Own Quote Section -->
+    <div class="generate-quote-section">
+      <h2>Create Your Personalized Friendship Quote</h2>
+      <input type="text" id="nameInput" placeholder="Enter a name" />
+      <input type="text" id="adjectiveInput" placeholder="Enter an adjective" />
+      <button id="previewQuoteBtn">Preview Quote</button>
+      <p id="generatedQuotePreview"></p>
+      <button id="submitGeneratedQuoteBtn">Submit Your Quote</button>
+    </div>
+
+    <!-- Reaction Buttons -->
+    <div class="reaction-buttons">
+      <button class="reaction-btn" id="likeBtn">👍</button>
+      <button class="reaction-btn" id="loveBtn">❤️</button>
+      <button class="reaction-btn" id="sadBtn">😢</button>
+      <button class="reaction-btn" id="clapBtn">👏</button>
+    </div>
   </div>
+
   <footer class="footer">
-    <p>🚀 Powered by Mephisto X | Creating bonds, one friendship at a time! 🌟</p>
-  </footer>
+    <p>🚀 Powered by <strong><a href="https://github.com/debrajx1" target="_blank" class="mephisto-link">Mephisto X</a></strong> | Spreading positivity, one friendship at a time! 💕</p>
+</footer>
+
   <script src="script.js"></script>
 </body>
 </html>

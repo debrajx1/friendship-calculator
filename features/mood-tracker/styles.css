@@ -1,11 +1,368 @@
-/* Feature Specific Styles */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 10px; /* Customize the scrollbar width */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Light background for the scrollbar track */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #9b49b2; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    transition: background 0.3s ease; /* Smooth transition when hovering */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9b49b2; /* Darker color on hover for better visibility */
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 40px 20px;
+}
+
+/* Mood Card Styling */
 .mood-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 500px;
     width: 100%;
-    animation: fadeIn 1s ease;
+    max-width: 620px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 50px 40px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header Text */
+.mood-card h2 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+}
+
+/* Input Styling */
+.mood-card input[type="text"] {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* Ensure padding does not cause overflow */
+    padding: 14px 18px;
+    margin: 12px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.mood-card input[type="text"]:focus {
+    border-color: #8e24aa;
+    box-shadow: 0 0 8px rgba(142, 36, 170, 0.2);
+    outline: none;
+}
+
+/* Button Styling */
+.mood-card button {
+    margin-top: 20px;
+    padding: 14px 36px;
+    background: linear-gradient(to right, #8e24aa, #ba68c8);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mood-card button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, #7b1fa2, #ce93d8);
+    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.2);
+}
+
+/* Mood Result Styling */
+#moodResult {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f3f1ff;
+    border-left: 6px solid #8e24aa;
+    border-radius: 14px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4a148c;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+    animation: slideUp 0.6s ease-in-out;
+    text-align: center;
+}
+
+.emoji {
+    font-size: 3rem;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Happy Emoji Animation (Bouncing) */
+.emoji.happy {
+    animation: bounce 1s infinite;
+}
+
+/* Sad Emoji Animation (Wobbling) */
+.emoji.sad {
+    animation: wobble 1s infinite;
+}
+
+/* Neutral Emoji Animation (Pulsing) */
+.emoji.neutral {
+    animation: pulse 1.5s infinite;
+}
+
+/* Excited Emoji Animation (Shaking) */
+.emoji.excited {
+    animation: shake 1s infinite;
+}
+
+/* Angry Emoji Animation (Shaking) */
+.emoji.angry {
+    animation: shake 1s infinite;
+}
+
+/* Stressed Emoji Animation (Spinning) */
+.emoji.stressed {
+    animation: spin 1.5s infinite;
+}
+
+/* Hopeful Emoji Animation (Pulsing) */
+.emoji.hopeful {
+    animation: pulse 1.5s infinite;
+}
+
+/* Grateful Emoji Animation (Spinning) */
+.emoji.grateful {
+    animation: spin 1.5s infinite;
+}
+
+/* Confident Emoji Animation (Bouncing) */
+.emoji.confident {
+    animation: bounce 1s infinite;
+}
+
+/* Inspired Emoji Animation (Pulsing) */
+.emoji.inspired {
+    animation: pulse 1.5s infinite;
+}
+
+/* Romantic Emoji Animation (Shaking) */
+.emoji.romantic {
+    animation: shake 1s infinite;
+}
+
+/* Bored Emoji Animation (Wobbling) */
+.emoji.bored {
+    animation: wobble 1s infinite;
+}
+
+/* Energetic Emoji Animation (Bouncing) */
+.emoji.energetic {
+    animation: bounce 1s infinite;
+}
+
+/* Silly Emoji Animation (Shaking) */
+.emoji.silly {
+    animation: shake 1s infinite;
+}
+
+/* Curious Emoji Animation (Pulsing) */
+.emoji.curious {
+    animation: pulse 1.5s infinite;
+}
+
+/* Motivated Emoji Animation (Shaking) */
+.emoji.motivated {
+    animation: shake 1s infinite;
+}
+
+/* Confused Emoji Animation (Wobbling) */
+.emoji.confused {
+    animation: wobble 1s infinite;
+}
+
+/* Bounce Animation for Happy Emoji */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Wobble Animation for Sad and Bored Emojis */
+@keyframes wobble {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Pulse Animation for Neutral, Hopeful, Inspired, Curious Emojis */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Shake Animation for Excited, Angry, Romantic, Silly, Motivated Emojis */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Spin Animation for Stressed, Grateful Emojis */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design for Emoji Scaling */
+@media (max-width: 600px) {
+    .emoji {
+        font-size: 2.5rem;
+    }
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 18px;
+    background-color: #ffffff;
+    border-top: 2px dashed #e1bee7;
+    font-size: 0.95rem;
+    color: #555;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.footer .mephisto {
+    font-weight: 600;
+    color: #8e24aa;
+    text-decoration: none;
+}
+
+.footer .mephisto:hover {
+    color: #6a1b9a;
+    cursor: default;
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .mood-card {
+        padding: 35px 25px;
+    }
+
+    .mood-card h2 {
+        font-size: 2rem;
+    }
+
+    .mood-card input[type="text"],
+    .mood-card button {
+        width: 100%;
+    }
 }

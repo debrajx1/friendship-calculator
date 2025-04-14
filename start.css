@@ -10,9 +10,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #FFA69E, #FF7F50);
+    background: linear-gradient(135deg, #FF6B81, #FF9F43); /* Smooth pink to orange gradient */
     background-size: 200% 200%;
-    animation: gradientMove 10s ease infinite;
+    animation: gradientMove 12s ease infinite;
     color: #fff;
     height: 100vh;
     display: flex;
@@ -31,68 +31,78 @@ body {
 
 .wrapper {
     width: 100%;
-    max-width: 460px;
+    max-width: 480px;
     padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
     border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(12px);
-    animation: fadeIn 0.8s ease;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14px);
+    animation: fadeIn 1s ease;
+    transition: transform 0.3s ease-in-out;
+}
+
+.wrapper:hover {
+    transform: scale(1.02); /* Subtle hover effect for a modern feel */
 }
 
 h1 {
     font-size: 2.6rem;
     font-weight: 600;
-    color: #FFE5D9;
+    color: #FFF0F3; /* Soft pinkish tone */
     margin-bottom: 0.8rem;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 p {
     font-size: 1.2rem;
-    color: #FDFDFD;
-    margin-bottom: 1.8rem;
+    color: #F7F7F7; /* Subtle white for readability */
+    margin-bottom: 2rem;
     font-weight: 400;
 }
 
 /* Input styling */
 input[type="text"] {
     width: 100%;
-    padding: 0.9rem 1rem;
-    font-size: 1.05rem;
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    border: 2px solid #ffffff44;
-    border-radius: 10px;
-    background-color: #fff;
+    border: 2px solid #ffffff66; /* Lighter, more subtle border */
+    border-radius: 12px;
+    background-color: #FFF;
     color: #333;
     transition: all 0.3s ease;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 input[type="text"]:focus {
     outline: none;
-    border-color: #FF7F50;
-    box-shadow: 0 0 10px rgba(255, 127, 80, 0.3);
+    border-color: #FF9F43; /* Warm orange border */
+    box-shadow: 0 0 12px rgba(255, 159, 67, 0.4);
 }
 
 /* Button styling */
 button {
     width: 100%;
-    padding: 0.9rem;
+    padding: 1rem;
     font-size: 1.2rem;
     font-weight: 600;
     border: none;
     border-radius: 30px;
-    background-color: #FF7F50;
+    background-color: #f58c2b; /* Warm orange */
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 14px rgba(255, 127, 80, 0.3);
+    box-shadow: 0 6px 18px rgba(255, 159, 67, 0.3);
 }
 
 button:hover {
-    background-color: #FF5A36;
-    box-shadow: 0 8px 18px rgba(255, 90, 54, 0.4);
+    background-color: #f4711f; /* Darker orange on hover */
+    box-shadow: 0 8px 20px rgba(255, 127, 50, 0.4);
+    transform: translateY(-2px); /* Button lift effect */
+}
+
+button:active {
+    transform: translateY(1px); /* Slight depression effect when clicked */
 }
 
 /* Entry animation */
@@ -114,19 +124,20 @@ footer {
     left: 0;
     right: 0;
     font-size: 0.95rem;
-    color: #FFDDC1;
+    color: #FFF0F3; /* Soft pinkish footer */
     text-align: center;
     animation: fadeIn 1.5s ease;
 }
 
 footer a {
-    color: #FFDDC1;
+    color: #FF9F43; /* Orange links */
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #FFE5B4;
+    color: #FF7F32; /* Darker orange on hover */
 }
 
 /* Responsive adjustments */
@@ -136,7 +147,7 @@ footer a:hover {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     button {
