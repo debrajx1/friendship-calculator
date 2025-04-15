@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gift Ideas Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="gift-container">
+    <h1>🎁 Personalized Gift Ideas</h1>
+    <p>Select an occasion, vibe, and price range to receive a unique and thoughtful gift idea tailored to your choice!</p>
+
+<div class="selectors">
+    <label for="occasion">Occasion:</label>
+    <select id="occasion">
+      <option value="birthday">🎉 Birthday</option>
+      <option value="anniversary">💞 Anniversary</option>
+      <option value="cheer-up">🌈 Cheer-Up</option>
+      <option value="random">🎲 Random Surprise</option>
+      <option value="graduation">🎓 Graduation</option>
+      <option value="thank-you">🙏 Thank You</option>
+      <option value="promotion">🏆 Job Promotion</option>
+      <option value="farewell">👋 Farewell</option>
+      <option value="just-because">✨ Just Because</option>
+      <option value="holiday">🎄 Holiday Special</option>
+      <option value="friendship-day">👯‍♀️ Friendship Day</option>
+    </select>
+  
+    <label for="vibe">Vibe:</label>
+    <select id="vibe">
+      <option value="creative">🎨 Creative</option>
+      <option value="funny">😂 Funny</option>
+      <option value="adventurous">🧭 Adventurous</option>
+      <option value="sentimental">💖 Sentimental</option>
+      <option value="luxurious">👑 Luxurious</option>
+      <option value="cozy">🧸 Cozy</option>
+      <option value="practical">🛠️ Practical</option>
+      <option value="quirky">🌀 Quirky</option>
+      <option value="surprising">🎁 Surprising</option>
+    </select>
+  
+    <label for="price">Price Range:</label>
+<select id="price">
+  <option value="under-500">💸 Budget (Under ₹500)</option>
+  <option value="500-1000">🎁 Affordable (₹500 ~ ₹1,000)</option>
+  <option value="1000-2500">💰 Mid-range (₹1,000 ~ ₹2,500)</option>
+  <option value="2500-5000">🛍️ Premium (₹2,500 ~ ₹5,000)</option>
+  <option value="5000-10000">💎 Luxe (₹5,000 ~ ₹10,000)</option>
+  <option value="above-10000">👑 Grand (Above ₹10,000)</option>
+</select>
+
+    <button id="getGift">Get Gift Idea</button>
+  </div>  
+
+  <script src="script.js"></script>
+</body>
+</html>

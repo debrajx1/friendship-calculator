@@ -1,0 +1,223 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f3ecff, #dff6ff);
+    color: #2e2e2e;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    overflow-x: hidden;
+  }
+
+  /* Scrollbar Customization */
+  ::-webkit-scrollbar {
+    width: 10px; /* Customize the scrollbar width */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Light background for the scrollbar track */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #cd82e1; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    transition: background 0.3s ease; /* Smooth transition when hovering */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d37cec; /* Darker color on hover for better visibility */
+  }
+  
+  /* Container */
+  .gift-container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px);
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 720px;
+    animation: fadeIn 0.8s ease-in-out;
+    transition: all 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Title & Description */
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #6a0dad;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    text-align: center;
+    margin-bottom: 28px;
+    line-height: 1.8;
+  }
+  
+  /* Selectors */
+  .selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 35px;
+  }
+  
+  .selectors label {
+    font-weight: 600;
+    color: #3c3c3c;
+    margin-bottom: 6px;
+    display: block;
+    font-size: 1.05rem;
+  }
+  
+  .selectors select {
+    appearance: none;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%236a0dad' height='24' viewBox='0 0 24 24' width='24'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding: 14px 18px;
+    padding-right: 44px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .selectors select:focus {
+    outline: none;
+    border-color: #8a2be2;
+    box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.15);
+  }
+  
+  /* Button */
+  button#getGift {
+    background: linear-gradient(135deg, #6a0dad, #a259ff);
+    color: #fff;
+    border: none;
+    padding: 16px 26px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 10px 20px rgba(106, 13, 173, 0.2);
+    letter-spacing: 0.4px;
+  }
+  
+  button#getGift:hover {
+    background: linear-gradient(135deg, #5a0ec9, #9238f3);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(106, 13, 173, 0.25);
+  }
+  
+  button#getGift:active {
+    transform: scale(0.98);
+  }
+  
+  /* Result Card */
+  .result-card {
+    background-color: #fefaff;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    padding: 28px;
+    margin-top: 35px;
+    display: none;
+    animation: slideUp 0.5s ease forwards;
+    transition: all 0.3s ease;
+  }
+  
+  .result-card.show {
+    display: block;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .result-card h2 {
+    font-size: 1.6rem;
+    color: #4a0072;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  
+  .result-card .gift-price {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-top: 12px;
+  }
+  
+  .result-footer {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #999;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .gift-container {
+      padding: 30px 20px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    p {
+      font-size: 0.95rem;
+    }
+  
+    .selectors select,
+    button#getGift {
+      font-size: 0.95rem;
+    }
+  }
+  
